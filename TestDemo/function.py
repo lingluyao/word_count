@@ -17,3 +17,7 @@ def count(request):
     sorted_dict=sorted(word_dict.items(),key=lambda x:x[1] ,reverse=True)
     context={'total_count':total_count,'text':user_text,'word_dict':word_dict,'sorted_dict':sorted_dict}
     return render(request,'count.html',context=context)
+
+
+def about(request):
+    return render(request,'about.html')
